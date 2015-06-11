@@ -1,0 +1,27 @@
+package com.sample
+
+import com.sample.Age
+
+rule "Kid Rule"
+
+    when
+        Age( age <= 5)
+    then
+        System.out.println("Its a Kid");
+end
+
+rule "Child Rule"
+    when
+        Age( age >= 5 && age <= 18)
+    then
+        System.out.println("Its a Child");
+
+end
+
+rule "Adult Rule"
+    when
+        Age( age > 18)
+    then
+        System.out.println("Its an Adult");
+
+end

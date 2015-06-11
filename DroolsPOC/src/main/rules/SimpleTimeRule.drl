@@ -1,0 +1,14 @@
+package com.sample
+
+import  com.sample.DateTime;
+import java.util.Date;
+
+rule "Your First Rule"
+
+    when
+        DateTime( myMessage : time);
+    then
+        System.out.println( "Current Time " +myMessage);
+
+end
+
