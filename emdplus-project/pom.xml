@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>emd</groupId>
+  <artifactId>emdplus-project</artifactId>
+  <version>1.0</version>
+  <dependencies>
+  <dependency>
+	<groupId>org.drools</groupId>
+	<artifactId>drools-compiler</artifactId>
+	<version>5.1.1</version>
+</dependency>
+  	<dependency>
+  		<groupId>org.kie.remote</groupId>
+  		<artifactId>kie-services-client</artifactId>
+  		<version>6.0.0.Beta5</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.kie</groupId>
+  		<artifactId>kie-api</artifactId>
+  		<version>6.0.1.Final</version>
+  	</dependency>
+  </dependencies>
+</project>

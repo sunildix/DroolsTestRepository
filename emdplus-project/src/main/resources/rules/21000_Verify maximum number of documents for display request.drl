@@ -1,0 +1,33 @@
+	package com.sample
+	
+	import com.sample.TravelportPSSDocumentDisplayRQType;
+	import com.sample.TravelportPSSDocumentDisplayRSType;
+	import com.sample.PassengerType;
+	import com.sample.TicketDocumentType;
+	import com.sample.DisplayRequest;
+	import com.sample.DisplayResponse;
+	import com.sample.DocumentHelper;
+	
+	
+	dialect "mvel"
+	
+	rule "Verify_maximum_number_of_documents_for_display_request"
+	   when
+	     displayRequest: DisplayRequest()
+	     travelportPSSDocumentDisplayRQType: TravelportPSSDocumentDisplayRQType() from displayRequest.travelportPSSDocumentDisplayRQType
+	     passengerTypeList : PassengerType() from travelportPSSDocumentDisplayRQType.passenger
+	     eval (passengerTypeList.ticketDocument.size() > 1)
+	     then
+	     DocumentHelper documentHelper = new DocumentHelper();  
+	     documentHelper.createError("62", "Max number of ticket/documents per request exceeded");
+	     TravelportPSSDocumentDisplayRSType travelportPSSDocumentDisplayRSType= new TravelportPSSDocumentDisplayRSType();
+	     travelportPSSDocumentDisplayRSType.setDocumentHelper(documentHelper);
+	     DisplayResponse displayResponse = new DisplayResponse();
+	     displayResponse.setDisplayResponse(travelportPSSDocumentDisplayRSType);
+	     insert(displayResponse);
+	end 
+	
+	query "getResponse"
+		displayResponse : DisplayResponse( )
+	end
+	

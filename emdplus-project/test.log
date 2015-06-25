@@ -1,0 +1,30 @@
+<object-stream>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Verify_maximum_number_of_documents_for_display_request [3, 2, 1]</activationId>
+  <rule>Verify_maximum_number_of_documents_for_display_request</rule>
+  <declarations>displayRequest=com.sample.DisplayRequest@25c9e2df(1); passengerTypeList=com.sample.PassengerType@4419a681(3); travelportPSSDocumentDisplayRQType=com.sample.TravelportPSSDocumentDisplayRQType@51670b57(2)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>1</factId>
+  <objectToString>com.sample.DisplayRequest@25c9e2df</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Verify_maximum_number_of_documents_for_display_request [3, 2, 1]</activationId>
+  <rule>Verify_maximum_number_of_documents_for_display_request</rule>
+  <declarations>displayRequest=com.sample.DisplayRequest@25c9e2df(1); passengerTypeList=com.sample.PassengerType@4419a681(3); travelportPSSDocumentDisplayRQType=com.sample.TravelportPSSDocumentDisplayRQType@51670b57(2)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>4</factId>
+  <objectToString>com.sample.DisplayResponse@1e4d8726</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Verify_maximum_number_of_documents_for_display_request [3, 2, 1]</activationId>
+  <rule>Verify_maximum_number_of_documents_for_display_request</rule>
+  <declarations>displayRequest=com.sample.DisplayRequest@25c9e2df(1); passengerTypeList=com.sample.PassengerType@4419a681(3); travelportPSSDocumentDisplayRQType=com.sample.TravelportPSSDocumentDisplayRQType@51670b57(2)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+</object-stream>
